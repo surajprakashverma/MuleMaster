@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MuleSoft Developer I — Practice Exam (60 Random Questions)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>MuleSoft Developer I — Practice Exam</h1>
+      <div class="meta">
+        <div class="timer" id="timer">120:00</div>
+        <div class="controls">
+          <button id="startBtn">Start New Exam</button>
+          <button id="submitBtn" disabled>Submit</button>
+          <button id="restartBtn" disabled>Restart</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="intro">
+        <p>This practice exam will randomly select <strong>60 questions</strong> from a bank of 2000. You will have <strong>120 minutes</strong> to complete. Your result will be evaluated instantly with detailed feedback.</p>
+        <ul>
+          <li>Question types included: Conceptual, Scenario-based, Diagram-based (ASCII diagrams), Code interpretation (DataWeave), and Fill-in-the-blank.</li>
+          <li>All questions are multiple choice with four options.</li>
+          <li>Navigate using the palette; answers are autosaved. You can submit anytime.</li>
+        </ul>
+      </section>
+
+      <section id="exam" class="hidden">
+        <div class="layout">
+          <div class="question-area">
+            <div class="q-header">
+              <span id="qNumber">Q1</span>
+              <span class="q-type" id="qType"></span>
+            </div>
+            <div class="q-body" id="qBody"></div>
+            <form class="options" id="optionsForm"></form>
+            <div class="nav">
+              <button id="prevBtn">Prev</button>
+              <button id="nextBtn">Next</button>
+            </div>
+          </div>
+          <aside class="palette">
+            <h2>Question Palette</h2>
+            <div id="palette" class="grid"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="result" class="hidden">
+        <h2>Result</h2>
+        <div id="score"></div>
+        <div id="breakdown"></div>
+        <div id="report"></div>
+        <button id="newExamBtn">New Random Exam</button>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2025 Practice Exam. Not affiliated with Salesforce or MuleSoft. For learning purposes only.</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

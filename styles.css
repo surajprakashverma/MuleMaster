@@ -1,0 +1,48 @@
+
+:root {
+  --bg: #0f172a; /* slate-900 */
+  --panel: #111827; /* gray-900 */
+  --text: #e5e7eb; /* gray-200 */
+  --accent: #38bdf8; /* sky-400 */
+  --correct: #22c55e;
+  --wrong: #ef4444;
+  --answered: #f59e0b;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  background: var(--bg); color: var(--text);
+}
+.app { max-width: 1200px; margin: 0 auto; padding: 16px; }
+header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+h1 { font-size: 1.4rem; margin: 0; }
+.meta { display: flex; gap: 16px; align-items: center; }
+.timer { font-weight: bold; color: var(--accent); font-size: 1.2rem; }
+.controls button { margin-right: 8px; }
+button { background: var(--panel); color: var(--text); border: 1px solid #1f2937; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+button:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.hidden { display: none; }
+.layout { display: grid; grid-template-columns: 1fr 260px; gap: 16px; }
+.question-area { background: var(--panel); padding: 16px; border-radius: 10px; }
+.q-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+.q-type { font-size: 0.9rem; opacity: 0.8; }
+.q-body { white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: #0b1220; padding: 12px; border-radius: 8px; }
+.options { margin-top: 12px; }
+.options label { display: block; padding: 8px; border: 1px solid #1f2937; border-radius: 8px; margin-bottom: 8px; cursor: pointer; }
+.options input { margin-right: 8px; }
+.nav { display: flex; justify-content: space-between; margin-top: 8px; }
+
+.palette { background: var(--panel); padding: 12px; border-radius: 10px; }
+.grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+.grid button { padding: 10px; border-radius: 8px; border: 1px solid #1f2937; }
+.grid button.answered { background: #1f2937; color: var(--answered); }
+.grid button.current { outline: 2px solid var(--accent); }
+.grid button.correct { background: #052e1a; color: var(--correct); }
+.grid button.wrong { background: #3a0410; color: var(--wrong); }
+
+#score { font-size: 1.2rem; margin-bottom: 8px; }
+#breakdown { margin-bottom: 12px; }
+#report { background: var(--panel); padding: 12px; border-radius: 10px; }
+#report details { margin-bottom: 8px; }
+footer { margin-top: 20px; opacity: 0.7; }
