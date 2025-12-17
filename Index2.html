@@ -1,1 +1,48 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MuleSoft Developer I – Mock Exam</title>
+
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: false, theme: 'default' });
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="app">
+  <header>
+    <h1>MuleSoft Developer I – Mock Exam</h1>
+    <div class="timer" id="timer">120:00</div>
+  </header>
+
+  <div class="layout">
+    <div class="question" id="exam">
+      <div><b>Question <span id="qIndex">1</span>/60</b></div>
+      <div id="questionText"></div>
+      <div id="diagram"></div>
+      <div class="options" id="options"></div>
+
+      <button id="revealBtn">👁 Reveal Answer</button>
+      <button id="reviewBtn">🟡 Mark for Review</button>
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <div class="palette">
+      <b>Question Palette</b>
+      <div class="grid" id="palette"></div>
+    </div>
+  </div>
+
+  <div id="result" class="hidden"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
