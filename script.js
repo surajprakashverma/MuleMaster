@@ -201,9 +201,6 @@ nextBtn.onclick=()=>{
     current++;
     render();
     updatePalette();
-
-    // stop the timer and scroll to top on every Next (kept as per your original logic)
-    stopTimer();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   } else {
     // show feedback form modal first, then continue to results via modal "Continue to Results"
