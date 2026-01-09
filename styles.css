@@ -8,6 +8,17 @@
   --review:#f59e0b;
 }
 
+.code-block {
+  background: #23272e;
+  color: #b7eaff;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1em;
+  overflow-x: auto;
+}
+
 *{box-sizing:border-box}
 
 body{
