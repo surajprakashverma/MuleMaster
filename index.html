@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MuleMaster</title>
+  <link rel="icon" href="Designer.png" type="image/x-icon">
+
+  <!-- Mermaid -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: false, theme: 'default' });
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- welcome overlay (keeps original markup, controlled by JS) -->
+<div id="welcomeOverlay" class="welcome-overlay hidden" aria-hidden="true">
+  <div class="welcome-card">
+    <h1>Welcome to MuleMaster</h1>
+    <p>Graphical mock exam — preparing a randomized test for you.</p>
+    <div class="countdown">Starting in <span id="startCount">5</span>s</div>
+    <div style="margin-top:12px">
+      <button id="startNow" class="primary">Start Now</button>
+    </div>
+  </div>
+</div>
+
+<div class="app">
+  <header>
+    <h1>MuleMaster</h1>
+    <div class="timer" id="timer">120:00</div>
+  </header>
+<div id="result" class="hidden"></div>
+  <div class="layout">
+    <div class="question" id="exam">
+      <div><b>Question <span id="qIndex">1</span>/60</b></div>
+      <div id="questionText"></div>
+      <div id="codeBlock"></div>
+      <!-- <div id="diagram"></div> -->
+      <div class="options" id="options"></div>
+
+      <button id="revealBtn">👁 Reveal Answer</button>
+      <button id="reviewBtn">🟡 Mark for Review</button>
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <div class="palette">
+      <b>Question Palette</b>
+      <div class="grid" id="palette"></div>
+    </div>
+  </div>
+
+  
+
+  <!-- Review panel (shows detailed per-question review with chosen / correct / explanation) -->
+  <div id="reviewPanel" class="hidden" aria-hidden="true"></div>
+
+  <!-- Feedback form modal (pops when user clicks submit on last question) -->
+  <div id="formModal" class="form-modal hidden" aria-hidden="true">
+    <div class="form-modal-card">
+      <h3>Feedback Form</h3>
+      <iframe id="formIframe" src="" title="Feedback form"></iframe>
+      <div style="display:flex;align-items:center;gap:12px;margin-top:8px;">
+        <a id="formOpenNew" href="#" target="_blank" rel="noopener" class="primary">Open in new tab</a>
+        <label style="display:flex;align-items:center;gap:8px;color:#cfe8ff;">
+          <input id="formConfirmed" type="checkbox" style="width:16px;height:16px;" /> I have submitted the feedback form
+        </label>
+        <div style="margin-left:auto;display:flex;gap:8px;">
+          <button id="formClose" class="primary" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);">Close</button>
+          <button id="formContinue" class="primary" disabled>Continue to Results</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
