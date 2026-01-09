@@ -6422,28 +6422,6 @@
       }
     }
   },
-
-  {
-    "id": "EXP-MS-0302",
-    "component": "Structuring Mule Apps – Event Source Restriction",
-    "difficulty": "Extreme",
-    "question": "Why can a subflow not contain an event source?",
-    "options": {
-      "A": "Performance",
-      "B": "Design consistency",
-      "C": "Ambiguous event ownership",
-      "D": "Syntax limitation"
-    },
-    "correctAnswer": "C",
-    "explanation": {
-      "correct": "Subflows rely on parent event context.",
-      "incorrect": {
-        "A": "Performance is not reason.",
-        "B": "Design follows event model.",
-        "D": "Not syntax-based."
-      }
-    }
-  },
   {
     "id": "EXP-MS-0302",
     "component": "Structuring Mule Apps – Event Source Restriction",
