@@ -55,6 +55,27 @@ header h1 { font-size: 2rem; margin:0; }
   align-items: start;
 }
 
+
+button.secondary {
+  background: #23272e;
+  color: #b7eaff;
+  border: 1px solid #b7eaff;
+  border-radius: 6px;
+  padding: 6px 18px;
+  font-size: 1rem;
+  margin: 0;
+  margin-right: 0;
+  margin-left: 0;
+  height: 38px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  transition: background 0.2s;
+}
+button.secondary:hover {
+  background: #1a1d22;
+}
+
+
 .question,.palette{
   background:var(--panel);
   padding:12px 14px;
