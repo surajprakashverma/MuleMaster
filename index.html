@@ -20,8 +20,17 @@
 <div id="welcomeOverlay" class="welcome-overlay hidden" aria-hidden="true">
   <div class="welcome-card">
     <h1>Welcome to MuleMaster</h1>
-    <p>Graphical mock exam — preparing a randomized test for you.</p>
-    <div class="countdown">Starting in <span id="startCount">5</span>s</div>
+    
+<p>
+  <span style="font-size:1.1em; color:#8ecfff;">
+    Welcome to your <b>MuleSoft</b> mock exam!<br>
+    <span style="color:#b7eaff;">
+      A fresh, randomized set of questions is being prepared just for you.<br>
+      <span style="font-size:0.95em; color:#8ecfff;">Created by <b>Suraj Prakash Verma</b></span>
+    </span>
+  </span>
+</p>
+<div class="countdown">Starting in <span id="startCount">5</span>s</div>
     <div style="margin-top:12px">
       <button id="startNow" class="primary">Start Now</button>
     </div>
@@ -29,10 +38,16 @@
 </div>
 
 <div class="app">
-  <header>
-    <h1>MuleMaster</h1>
+  
+
+<header style="display: flex; align-items: center; justify-content: space-between;">
+  <h1>MuleMaster</h1>
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <button id="retakeNowBtn" class="secondary">Retake Test</button>
     <div class="timer" id="timer">120:00</div>
-  </header>
+  </div>
+</header>
+
 <div id="result" class="hidden"></div>
   <div class="layout">
     <div class="question" id="exam">
@@ -41,7 +56,6 @@
       <div id="codeBlock"></div>
       <div id="diagram"></div>
       <div class="options" id="options"></div>
-
       <button id="revealBtn">👁 Reveal Answer</button>
       <button id="reviewBtn">🟡 Mark for Review</button>
       <button id="nextBtn">Next</button>
@@ -79,5 +93,4 @@
 
 <script src="script.js"></script>
 </body>
-
 </html>
